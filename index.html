@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="letters.js"></script>
+    <style>
+      svg{
+        display:block;
+        margin:0 auto;
+      }
+      textarea{
+        margin:0 auto;
+        resize:none;
+        text-align: center;
+        display:block;
+      }
+      #links{
+        top:10px;
+        left:10px;
+        position:fixed;
+      }
+      @media print{
+        #input{
+          display:none;
+        }
+        #links{
+          display:none;
+        }
+      }
+      i.fas{
+        padding:5px;
+        font-size:20px;
+      }
+      i.fas:hover{
+        opacity: .6;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="links">
+      <i id="link" class="fas fa-link"></i>
+      <i class="fas fa-print" onclick="window.print()"></i>
+    </div>
+    <form>
+      <div id="input">
+        <textarea name="message" rows="22" cols="30" autofocus="true" wrap="hard"></textarea>
+      </div>
+    </form>
+    <svg width=960 height=500></svg>
+    <script src="main.js"></script>
+  </body>
+</html>
